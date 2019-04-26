@@ -1,0 +1,24 @@
+{
+  "name": "aaltonaut",
+  "version": "1.0.0",
+  "description": "Webpage for portfolio",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c00k133/aaltonaut.git"
+  },
+  "author": "c00k133",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c00k133/aaltonaut/issues"
+  },
+  "homepage": "https://github.com/c00k133/aaltonaut#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  }
+}

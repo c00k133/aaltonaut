@@ -1,0 +1,10 @@
+extends layouts/main
+
+block content
+    section.hero.is-fullheight.is-dark
+        .hero-body
+            .container
+                h1.title.is-3= message
+                h2.subtitle.is-5= error.status
+                if error.stack
+                    pre #{error.stack}
