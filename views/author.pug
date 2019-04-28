@@ -1,0 +1,12 @@
+extends layouts/main
+
+block content
+    .content.is-medium
+        | Axel Neergaard
+
+    script.
+        window.onload = () =>
+            document
+                .getElementById('nav-author')
+                .classList
+                .add('is-active')

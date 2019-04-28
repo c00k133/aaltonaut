@@ -9,5 +9,9 @@ router.get('/', (req, res, next) => {
     res.render('index.pug')
 })
 
+router.get('/author/', (req, res, next) => {
+    res.render('author.pug')
+})
+
 
 module.exports = router

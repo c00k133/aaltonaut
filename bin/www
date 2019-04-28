@@ -2,7 +2,8 @@
 
 // Module dependencies
 const app = require('../app')
-const debug = require('debug')('nodefest:server')
+//const debug = require('debug')('nodefest:server')
+const debug = require('debug')('http')
 const http = require('http')
 
 // Get port from environment and store in Express.
