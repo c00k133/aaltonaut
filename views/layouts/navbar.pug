@@ -1,11 +1,10 @@
+mixin add-tab(name, url)
+    li&attributes(attributes)
+        a(href=url)
+            span= name
+
 .section
-    .tabs.is-centered.is-medium
+    .tabs.is-centered.is-large
         ul
-            li#nav-welcome
-                a(href='/')
-                    span
-                        | Welcome!
-            li#nav-author
-                a(href='/author')
-                    span
-                        | Test
+            +add-tab('Portfolio', '/')(id='nav-welcome')
+            +add-tab('Author', '/author')(id='nav-author')

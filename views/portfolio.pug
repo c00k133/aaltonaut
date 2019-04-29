@@ -1,0 +1,18 @@
+extends layouts/main
+
+mixin add-title(title, url)
+    h1.is-title.is-4
+        a(href=url)= title
+
+block content
+    .content.is-medium.has-text-centered
+        +add-title('Test', '/test')
+        +add-title('Test', '/')
+
+    script.
+        window.onload = () => {
+            document
+                .getElementById('nav-welcome')
+                .classList
+                .add('is-active')
+        }

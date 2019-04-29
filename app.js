@@ -3,6 +3,7 @@
 // Imports
 const express = require('express')
 const path = require('path')
+// TODO: uncomment once you have favicon
 //const favicon = require('serve-favicon')
 
 // Helper functions
@@ -43,6 +44,7 @@ app.use((err, req, res, next) => {
     res.locals.error = req.app.get('env') === 'development'
         ? err
         : { status: err_status }
+
     res.status(err_status)
     res.render('error')
 })
