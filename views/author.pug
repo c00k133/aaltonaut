@@ -6,8 +6,13 @@ block content
 
     script.
         window.onload = () => {
-            document
-                .getElementById('nav-author')
-                .classList
+            const getNavElem = (id) =>
+                document
+                    .getElementById(id)
+                    .classList
+
+            getNavElem('nav-author')
                 .add('is-active')
+            getNavElem('nav-welcome')
+                .remove('is-active')
         }
