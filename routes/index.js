@@ -2,6 +2,7 @@
 
 const express = require('express')
 const router = express.Router()
+const ksas = require('../res/ksas')
 
 
 // Base GET request, render landing page
@@ -13,8 +14,12 @@ router.get('/author/', (req, res, next) => {
     res.render('author.pug')
 })
 
-router.get('/test/', (req, res, next) => {
-    res.render('sections/test.pug')
+Object.keys(ksas).forEach(key => {
+    ksas[key].forEach(ksa => {
+        router.get(`/${ksa}/`, (req, res, next) => {
+            res.render(`sections/${key}/${ksa}.pug`)
+        })
+    })
 })
 
 module.exports = router

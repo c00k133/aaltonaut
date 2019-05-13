@@ -1,13 +1,14 @@
 extends layouts/main
 
 mixin add-title(title, url)
-    h1.is-title.is-4
+    h1.is-title
         a(href=url)= title
 
 block content
     .content.is-medium.has-text-centered
         +add-title('Test', '/test')
-        +add-title('Test', '/')
+        +add-title('Communication', '/communication')
+        +add-title('Attitude 0', '/attitude0')
 
     script.
         window.onload = () => {
