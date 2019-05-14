@@ -1,0 +1,12 @@
+extends main
+
+mixin add-quote(quote)
+    blockquote.is-size-6-mobile.is-size-4-desktop
+        em= quote
+
+block content
+    .content
+        h1.is-title= title
+
+        .ksa-section
+            block section

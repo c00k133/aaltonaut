@@ -1,5 +1,13 @@
+html {
+    background-color: #F0EAD6;
+}
+
 * {
     font-family: "Overpass", sans-serif;
+}
+
+.links {
+    text-transform: uppercase;
 }
 
 .tabs {

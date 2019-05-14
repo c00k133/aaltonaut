@@ -21,10 +21,14 @@ router.get('/author/', (req, res, next) => {
 
 Object.keys(ksas).forEach(key => {
     ksas[key].forEach(ksa => {
+
         const ksaUrl = ksa.url
         router.get(`/${ksaUrl}/`, (req, res, next) => {
-            res.render(`sections/${key}/${ksaUrl}.pug`)
+            res.render(`sections/${key}/${ksaUrl}.pug`, {
+                title: ksa.ksa
+            })
         })
+
     })
 })
 

@@ -21,6 +21,7 @@ app.use('/static/', express.static(static_folder))
 app.set('views', root_join('views'))
 app.set('view engine', 'pug')
 
+
 // Route paths
 const routes_join = curried_join(root_join('routes'))
 

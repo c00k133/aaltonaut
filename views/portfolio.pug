@@ -1,10 +1,10 @@
 extends layouts/main
 
 mixin add-title(title, url)
-    h1.is-title
+    h1.is-title&attributes(attributes)
         a(href=url)= title
 
 block content
     .content.is-medium.has-text-centered
         for link in links
-            +add-title(link.ksa, '/' + link.url)
+            +add-title(link.ksa, '/' + link.url)(class='links')
