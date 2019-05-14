@@ -4,8 +4,7 @@ mixin add-tab(name, url)
             span= name
 
 .section
-    //.tabs.is-centered.is-hidden-desktop
-    .tabs.is-centered.is-large
-        ul
+    .tabs.is-centered
+        ul.is-uppercase.has-text-weight-bold.is-size-6-touch.is-size-4-desktop
             +add-tab('Portfolio', '/')(id='nav-welcome')
             +add-tab('Author', '/author')(id='nav-author')

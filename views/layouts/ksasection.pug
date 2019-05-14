@@ -1,12 +1,12 @@
 extends main
 
 mixin add-quote(quote)
-    blockquote.is-size-6-mobile.is-size-4-desktop
+    blockquote.is-size-6-touch.is-size-4-desktop
         em= quote
 
 block content
     .content
-        h1.is-title= title
+        h1.is-title.is-size-5-touch.is-size-3-desktop= title
 
         .ksa-section
             block section

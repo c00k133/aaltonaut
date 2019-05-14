@@ -10,11 +10,6 @@ html {
     text-transform: uppercase;
 }
 
-.tabs {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .ksa-section {
     transition: color 0.2s, background-color 0.7s;
 }
