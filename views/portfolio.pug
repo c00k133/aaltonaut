@@ -6,7 +6,5 @@ mixin add-title(title, url)
 
 block content
     .content.is-medium.has-text-centered
-        +add-title('Test', '/test')
-        +add-title('Communication', '/communication')
-        +add-title('Attitude 0', '/attitude0')
-
+        for link in links
+            +add-title(link.ksa, '/' + link.url)

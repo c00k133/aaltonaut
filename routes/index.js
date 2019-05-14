@@ -2,12 +2,17 @@
 
 const express = require('express')
 const router = express.Router()
-const ksas = require('../res/ksas')
+const preprocess = require('../modules/preprocess')
+
+const ksas = preprocess.ksas
 
 
 // Base GET request, render landing page
 router.get('/', (req, res, next) => {
-    res.render('portfolio.pug')
+    const links = [].concat.apply([], Object.keys(ksas).map(key => ksas[key]))
+    res.render('portfolio.pug', {
+        links: links
+    })
 })
 
 router.get('/author/', (req, res, next) => {
@@ -16,8 +21,9 @@ router.get('/author/', (req, res, next) => {
 
 Object.keys(ksas).forEach(key => {
     ksas[key].forEach(ksa => {
-        router.get(`/${ksa}/`, (req, res, next) => {
-            res.render(`sections/${key}/${ksa}.pug`)
+        const ksaUrl = ksa.url
+        router.get(`/${ksaUrl}/`, (req, res, next) => {
+            res.render(`sections/${key}/${ksaUrl}.pug`)
         })
     })
 })
