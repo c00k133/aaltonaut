@@ -1,7 +1,7 @@
 extends ../../layouts/ksasection
 
-mixin add-paragraph()
-    p.is-size-6-touch.is-size-4-desktop.
+mixin add-list-link(url, text)
+    li: a(href=url target='_blacnk' rel='noopener noreferrer')= text
 
 block section
     p.is-size-6-touch.is-size-4-desktop.
@@ -19,13 +19,19 @@ block section
         Altogether I would say that I know 7 languages in total, listed below:
 
     ul.is-size-6-touch.is-size-4-desktop
-        li #[a(href='https://scala-lang.org/') Scala]
-        li #[a(href='https://www.oracle.com/technetwork/java/index.html') Java]
-        li #[a(href='https://en.wikipedia.org/wiki/C_%28programming_language%29') C]
-        li #[a(href='https://isocpp.org/') C++]
-        li #[a(href='https://www.python.org/') Python]
-        li #[a(href='https://nodejs.org/en/') Node.js]
-        li #[a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript') JavaScript]
+        +add-list-link('https://scala-lang.org/', 'Scala')
+        +add-list-link('https://www.oracle.com/technetwork/java/index.html', 'Java')
+        +add-list-link('https://en.wikipedia.org/wiki/C_%28programming_language%29', 'C')
+        +add-list-link('https://isocpp.org/', 'C++')
+        +add-list-link('https://www.python.org/', 'Python')
+        +add-list-link('https://nodejs.org/en/', 'Node.js')
+        +add-list-link('https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript')
+
+    p.is-size-6-touch.is-size-4-desktop.
+        Programming languages are not the only tools a Computer Scientist or Software Engineer needs, but tools for managing systems, integration, testing, and inter- and intra-communication.
+        Such tools are integrated parts of my workflow, both within personal projects and group-projects.
+
+    p.is-size-6-touch.is-size-4-desktop.
 
     //- CTO position
         Talk about how this enables you to create great products
