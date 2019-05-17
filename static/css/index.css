@@ -13,3 +13,28 @@ html {
 .ksa-section {
     transition: color 0.2s, background-color 0.7s;
 }
+
+footer.footer {
+    background-color: #F0EAD6;
+}
+
+a.landing-page {
+    color: #333333;
+}
+
+a.landing-page:hover {
+    color: #C21E56;
+}
+
+a.a-neergaard {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.a-neergaard:hover {
+    color: #C21E56;
+}
+
+a {
+    color: #C21E56;
+}

@@ -2,6 +2,7 @@
 
 const express = require('express')
 const router = express.Router()
+const convert = require('../modules/convert')
 const preprocess = require('../modules/preprocess')
 
 const ksas = preprocess.ksas
@@ -24,9 +25,8 @@ Object.keys(ksas).forEach(key => {
 
         const ksaUrl = ksa.url
         router.get(`/${ksaUrl}/`, (req, res, next) => {
-            res.render(`sections/${key}/${ksaUrl}.pug`, {
-                title: ksa.ksa
-            })
+            const pugFile = `sections/${key}/${ksaUrl}.pug`
+            res.render(`sections/${key}/${ksaUrl}.pug`)
         })
 
     })

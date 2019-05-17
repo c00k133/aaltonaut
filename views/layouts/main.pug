@@ -3,7 +3,8 @@ html(lang='en')
     include head
 
     body
-        include navbar
         section.hero
             .hero-body.container
+                include navbar
                 block content
+        include footer

@@ -1,10 +1,4 @@
-mixin add-tab(name, url)
-    li&attributes(attributes)
-        a(href=url)
-            span= name
-
-.section
-    .tabs.is-centered
-        ul.is-uppercase.has-text-weight-bold.is-size-6-touch.is-size-4-desktop
-            +add-tab('Portfolio', '/')(id='nav-welcome')
-            +add-tab('Author', '/author')(id='nav-author')
+.section.has-text-centered
+    h1.title.is-uppercase.is-size-4-touch.is-size-1-desktop
+        a.a-neergaard(href='https://neergaard.dev/' target='_blank' rel='noopener noreferrer')
+            | Axel Neergaard
